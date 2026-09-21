@@ -86,3 +86,63 @@ h2 span { color: var(--teal); }
 footer { display: flex; justify-content: space-between; padding: 22px clamp(24px, 6vw, 92px); background: var(--ink); color: rgba(247,242,232,.62); font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .04em; }
 @media (max-width: 700px) { .hero { min-height: 90vh; padding: 24px; }.hero-content { padding: 90px 0 100px; }.hero-orbit { right: -45%; top: 25%; }.orbit-two { right: -25%; top: 36%; }.sparkle-one { right: 20%; top: 25%; }.hero-footer { gap: 15px; align-items: flex-end; }.hero-footer span:last-child { text-align: right; }.section-heading, .travel-inner { display: block; }.section-heading { margin-bottom: 55px; }.section-heading h2 { margin-top: 42px; }.details, .travel { padding: 85px 24px; }.timeline-item { grid-template-columns: 66px 42px 1fr; column-gap: 13px; }.timeline-item:not(:last-child)::after { left: 86px; }.timeline-marker { width: 42px; height: 42px; font-size: 10px; }.time { font-size: 10px; }.timeline-copy h3 { font-size: 25px; }.travel-notes { margin-top: 55px; }.rsvp { padding: 82px 24px; }footer { display: block; line-height: 2; }footer span { display: block; } }
 @media (max-width: 700px) { .hero-photo { right: 20px; top: 19%; width: 44vw; height: 34vh; transform: rotate(4deg); opacity: .9; }.hero-content { max-width: 64%; }.hero-copy { font-size: 13px; }.hero-photo figcaption { font-size: 8px; }.disco-ball { top: 10%; right: 5%; width: 50px; }.disco-ball::before { height: 28px; } }
+@media (max-width: 700px) {
+  .hero {
+    min-height: auto;
+    padding: 22px 20px 24px;
+  }
+
+  .topline {
+    font-size: 10px;
+  }
+
+  .hero-content {
+    max-width: none;
+    padding: 64px 0 22px;
+  }
+
+  h1 {
+    max-width: 100%;
+    margin-bottom: 22px;
+    font-size: clamp(3.4rem, 16vw, 5rem);
+    line-height: .86;
+    letter-spacing: -.07em;
+  }
+
+  .hero-copy {
+    max-width: 240px;
+    margin-bottom: 26px;
+    font-size: 14px;
+  }
+
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .hero-photo {
+    position: relative;
+    top: auto;
+    right: auto;
+    align-self: flex-end;
+    width: min(68vw, 280px);
+    height: 330px;
+    margin: 0 8px 28px 0;
+    opacity: 1;
+  }
+
+  .disco-ball {
+    top: 11%;
+    right: 8%;
+  }
+
+  .hero-orbit {
+    pointer-events: none;
+  }
+
+  .hero-footer {
+    position: relative;
+    z-index: 2;
+  }
+}
